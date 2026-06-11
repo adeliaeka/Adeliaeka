@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Kontak</title>
     <link rel="stylesheet" href="assets/css/style.css">
@@ -8,12 +9,12 @@
 
 <body>
 
-   <nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="biodata.html">Biodata</a>
-    <a href="kontak.html">Kontak</a>
-    <a href="mahasiswa.html">Data Mahasiswa</a>
-</nav>
+    <nav class="navbar">
+        <a href="index.php">Home</a>
+        <a href="biodata.php">Biodata</a>
+        <a href="kontak.php">Kontak</a>
+        <a href="mahasiswa.php">Data Mahasiswa</a>
+    </nav>
 
     <div class="contact-container">
         <h1>Kontak</h1>
@@ -24,4 +25,5 @@
     </div>
 
 </body>
+
 </html>
