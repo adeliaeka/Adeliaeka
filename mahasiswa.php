@@ -1,15 +1,8 @@
 <?php
 
-//API
-$koneksi = mysqli_connect("localhost", "root", "", "adlweekly");
-
-if (!$koneksi) {
-    die("Koneksi gagal: " . mysqli_connect_error());
-}
-
+require 'fungsi.php';
 $query = "SELECT * FROM mahasiswa";
-
-$result = mysqli_query($koneksi, $query); //// lemari isi data
+$mahasiswas =tampildata($query); /// wadah berisi data 
 
 
 
@@ -64,7 +57,9 @@ $result = mysqli_query($koneksi, $query); //// lemari isi data
         </tr>
         <?php
         $no = 1;
-        while ($mhs = mysqli_fetch_assoc($result)) {
+        foreach ($mahasiswas as $mhs)
+            {
+        
         ?>
             <tr>
                 <td align="center"><?php echo $no++; ?></td>
