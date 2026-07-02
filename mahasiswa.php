@@ -2,7 +2,7 @@
 
 require 'fungsi.php';
 $query = "SELECT * FROM mahasiswa";
-$mahasiswas =tampildata($query); /// wadah berisi data 
+$mahasiswas = tampildata($query); /// wadah berisi data 
 
 
 
@@ -57,9 +57,8 @@ $mahasiswas =tampildata($query); /// wadah berisi data
         </tr>
         <?php
         $no = 1;
-        foreach ($mahasiswas as $mhs)
-            {
-        
+        foreach ($mahasiswas as $mhs) {
+
         ?>
             <tr>
                 <td align="center"><?php echo $no++; ?></td>
@@ -68,10 +67,19 @@ $mahasiswas =tampildata($query); /// wadah berisi data
                 <td align="center"><?php echo $mhs["jurusan"]; ?></td>
                 <td align="center"><?php echo $mhs["email"]; ?></td>
                 <td align="center"><?php echo $mhs["no_hp"]; ?></td>
-                <td><img src="assets/img/<?php echo $mhs["foto"]; ?>" width="70px"></td>
                 <td>
-                    <a href="editdata.php?id=<?php echo $mhs["id"]; ?>"><button>Edit</button></a>
-                    <a href="deletdata.php?id=<?php echo $mhs["id"]; ?>"><button>Hapus</button></a>
+                    <img src="assets/img/<?php echo $mhs['foto']; ?>" width="80">
+                </td>
+                <td>
+
+                    <a href="editdata.php?id=<?php echo $mhs['id']; ?>">
+                        <button>Edit</button>
+                    </a>
+
+                    <a href="deletedata.php?id=<?php echo $mhs['id']; ?>"
+                        onclick="return confirm('Yakin ingin menghapus data ini?');">
+                        <button>Hapus</button>
+                    </a>
                 </td>
             </tr>
         <?php
